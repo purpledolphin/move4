@@ -23,7 +23,7 @@
                         <field name="NUM">2</field>
                       </block>
                     </value>
-                    <statement name="DO">
+                    <next>
                       <block type="robot_delay" id="303" inline="true">
                         <value name="DELAY">
                           <block type="math_number" id="304">
@@ -34,7 +34,7 @@
                           <block type="movement_forward" id="323"></block>
                         </next>
                       </block>
-                    </statement>
+                    </next>
                   </block>
                 </next>
               </block>
