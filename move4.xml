@@ -1,54 +1,44 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="240" inline="false" x="201" y="21">
-    <field name="MODE">UNTIL</field>
-    <value name="NUMBER">
-      <block type="sensor_button" id="247">
-        <field name="OBJECT">ENTER</field>
+  <block type="controls_repeat" id="415" inline="true" x="453" y="111">
+    <value name="TIMES">
+      <block type="math_number" id="423">
+        <field name="NUM">2</field>
       </block>
     </value>
     <statement name="DO">
       <block type="movement_forward" id="266">
         <next>
-          <block type="controls_repeat" id="340" inline="true">
-            <value name="TIMES">
-              <block type="math_number" id="362">
-                <field name="NUM">2</field>
+          <block type="robot_delay" id="279" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="292">
+                <field name="NUM">1000</field>
               </block>
             </value>
-            <statement name="DO">
-              <block type="robot_delay" id="279" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="292">
-                    <field name="NUM">1000</field>
-                  </block>
-                </value>
+            <next>
+              <block type="movement_right" id="302">
                 <next>
-                  <block type="movement_right" id="302">
-                    <next>
-                      <block type="controls_repeat" id="363" inline="true">
-                        <value name="TIMES">
-                          <block type="math_number" id="364">
-                            <field name="NUM">2</field>
+                  <block type="controls_repeat" id="363" inline="true">
+                    <value name="TIMES">
+                      <block type="math_number" id="364">
+                        <field name="NUM">2</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="robot_delay" id="303" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="304">
+                            <field name="NUM">1000</field>
                           </block>
                         </value>
-                        <statement name="DO">
-                          <block type="robot_delay" id="303" inline="true">
-                            <value name="DELAY">
-                              <block type="math_number" id="304">
-                                <field name="NUM">1000</field>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="movement_forward" id="323"></block>
-                            </next>
-                          </block>
-                        </statement>
+                        <next>
+                          <block type="movement_forward" id="323"></block>
+                        </next>
                       </block>
-                    </next>
+                    </statement>
                   </block>
                 </next>
               </block>
-            </statement>
+            </next>
           </block>
         </next>
       </block>
@@ -56,5 +46,8 @@
     <next>
       <block type="movement_stop" id="333"></block>
     </next>
+  </block>
+  <block type="sensor_button" id="407" x="628" y="490">
+    <field name="OBJECT">UP</field>
   </block>
 </xml>
