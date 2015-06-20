@@ -9,23 +9,41 @@
     <statement name="DO">
       <block type="movement_forward" id="266">
         <next>
-          <block type="robot_delay" id="279" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="292">
-                <field name="NUM">1000</field>
+          <block type="controls_repeat" id="340" inline="true">
+            <value name="TIMES">
+              <block type="math_number" id="362">
+                <field name="NUM">2</field>
               </block>
             </value>
             <next>
-              <block type="movement_right" id="302">
+              <block type="robot_delay" id="279" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="292">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
                 <next>
-                  <block type="robot_delay" id="303" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="304">
-                        <field name="NUM">1000</field>
-                      </block>
-                    </value>
+                  <block type="movement_right" id="302">
                     <next>
-                      <block type="movement_forward" id="323"></block>
+                      <block type="controls_repeat" id="363" inline="true">
+                        <value name="TIMES">
+                          <block type="math_number" id="364">
+                            <field name="NUM">2</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="robot_delay" id="303" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="304">
+                                <field name="NUM">1000</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="movement_forward" id="323"></block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
                     </next>
                   </block>
                 </next>
